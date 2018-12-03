@@ -6,12 +6,12 @@ This repository documents my efforts. I hope you find it useful to you.
 
 ## Building
 
-You will need to install `git` if you haven't already. Then, execute the following commands on from your terminal. It should work on OS X, Linux, and MinGW.
+You will need to install `git` if you haven't already. Then execute the following commands on from your terminal. It should work on OS X, Linux, and MinGW.
 
 ```bash
 git clone https://www.github.com/neveroddoreven/alpine-bash-profile.git alpine-bash-profile
 cd alpine-bash-profile
-docker build -t "neveroddoreven/alpine-bash-profile" .
+docker build -t "neveroddoreven/alpine-bash-profile:latest" .
 ```
 
 ## Users and Permissions
@@ -22,7 +22,7 @@ This image is configured with two users: `root` and `appuser`. Both belong to th
 
 ## Running the Container
 
-Running as `appuser` (the default user).
+### Running as `appuser` (the default user)
 
 ```bash
 ~ $ docker run -it --rm "neveroddoreven/alpine-bash-profile:latest"
@@ -48,7 +48,7 @@ appuser ~ $
 ```
 </detail>
 
-Running as root.
+### Running as `root`
 
 ```bash
 ~ $ docker run -it --rm -u root "neveroddoreven/alpine-bash-profile:latest"
@@ -73,7 +73,7 @@ appuser ~ #
 ```
 </detail>
 
-Passing a known flag.
+### Running While Passing a Known Flag
 
 ```bash
 ~ $ docker run -it --rm "neveroddoreven/alpine-bash-profile:latest" --some-var "some var"
@@ -103,7 +103,7 @@ some var
 ```
 </detail>
 
-Passing an unknown flag/option.
+### Running While Passing an Unknown Option
 
 ```bash
 ~ $ docker run -it --rm "neveroddoreven/alpine-bash-profile:latest" -? "some var"
@@ -131,7 +131,7 @@ some var
 ```
 </detail>
 
-Logged in as `appuser`, switching user to `root`.
+### Switching User - `appuser` to `root`
 
 ```bash
 appuser ~ $ sudo su - root
@@ -149,7 +149,7 @@ This is a login shell
 ```
 </detail>
 
-Logged in as `root`, switching user to `appuser`.
+### Switching Users - `root` to `appuser`
 
 ```bash
 root ~ $ su - appuser
@@ -166,6 +166,7 @@ This is an interactive shell
 This is a login shell
 ```
 </detail>
+
 
 ## License
 
