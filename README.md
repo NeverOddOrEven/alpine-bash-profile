@@ -22,6 +22,12 @@ This image is configured with two users: `root` and `appuser`. Both belong to th
 
 ## Running the Container
 
+If you have not built the image, then you may also use the `docker` client to pull the build from docker hub. You will need to install `Docker CE` if you have not already done so.
+
+```bash
+docker pull neveroddoreven/alpine-bash-profile:latest
+```
+
 ### Running as `appuser` (the default user)
 
 ```bash
@@ -149,7 +155,7 @@ This is a login shell
 ```
 </detail>
 
-### Switching Users - `root` to `appuser`
+### Switching User - `root` to `appuser`
 
 ```bash
 root ~ $ su - appuser
