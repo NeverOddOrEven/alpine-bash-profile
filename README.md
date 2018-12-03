@@ -152,7 +152,7 @@ This is a login shell
 Logged in as `root`, switching user to `appuser`.
 
 ```bash
-root ~ \# su - appuser
+root ~ $ su - appuser
 ```
 
 <detail>
@@ -166,3 +166,7 @@ This is an interactive shell
 This is a login shell
 ```
 </detail>
+
+## License
+
+This is published under the MIT open source license.
